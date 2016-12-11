@@ -39,17 +39,18 @@ public class Functions {
 	public Response enviarEmail(EmailTO emailTO) {
 		  Properties props = new Properties();
 		  
-          props.put("mail.smtp.host", "smtp.zoho.com");
-          props.put("mail.smtp.socketFactory.port", "465");
-          props.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
+          props.put("mail.smtp.host", "smtp.sendgrid.net");
+          props.put("mail.smtp.starttls.enable", "true");
+          /*props.put("mail.smtp.socketFactory.port", "465");
+          props.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");*/
           props.put("mail.smtp.auth", "true");
-          props.put("mail.smtp.port", "465");
+          props.put("mail.smtp.port", "587");
 
           Session session = Session.getDefaultInstance(props,
                       new javax.mail.Authenticator() {
                            protected PasswordAuthentication getPasswordAuthentication()
                            {
-                                 return new PasswordAuthentication("fiapcloud@gustavopolarsa.com", "fiap123456");
+                                 return new PasswordAuthentication("gpolar", "Sevchenko1");
                            }
                       });
 
