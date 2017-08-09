@@ -50,7 +50,7 @@ public class Functions {
                       new javax.mail.Authenticator() {
                            protected PasswordAuthentication getPasswordAuthentication()
                            {
-                                 return new PasswordAuthentication("gpolar", "Sevchenko1");
+                                 return new PasswordAuthentication("user", "password");
                            }
                       });
 
